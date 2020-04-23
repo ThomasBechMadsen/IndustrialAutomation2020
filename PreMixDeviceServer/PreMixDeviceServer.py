@@ -6,9 +6,9 @@
 #  license :
 # ============================================================================
 #
-#  File :        TankDeviceServer.py
+#  File :        PreMixDeviceServer.py
 #
-#  Project :     TankDeviceServer
+#  Project :     PreMixDeviceServer
 #
 # This file is part of Tango device class.
 # 
@@ -38,108 +38,116 @@
 #     (Program Obviously used to Generate tango Object)
 # ############################################################################
 
-__all__ = ["TankDeviceServer", "TankDeviceServerClass", "main"]
+__all__ = ["PreMixDeviceServer", "PreMixDeviceServerClass", "main"]
 
 __docformat__ = 'restructuredtext'
 
 import PyTango
 import sys
 # Add additional import
-#----- PROTECTED REGION ID(TankDeviceServer.additionnal_import) ENABLED START -----#
+#----- PROTECTED REGION ID(PreMixDeviceServer.additionnal_import) ENABLED START -----#
 
-#----- PROTECTED REGION END -----#	//	TankDeviceServer.additionnal_import
+#----- PROTECTED REGION END -----#	//	PreMixDeviceServer.additionnal_import
 
 # Device States Description
 # No states for this device
 
 
-class TankDeviceServer (PyTango.Device_4Impl):
+class PreMixDeviceServer (PyTango.Device_4Impl):
     """"""
     
     # -------- Add you global variables here --------------------------
-    #----- PROTECTED REGION ID(TankDeviceServer.global_variables) ENABLED START -----#
+    #----- PROTECTED REGION ID(PreMixDeviceServer.global_variables) ENABLED START -----#
     
-    #----- PROTECTED REGION END -----#	//	TankDeviceServer.global_variables
+    #----- PROTECTED REGION END -----#	//	PreMixDeviceServer.global_variables
 
     def __init__(self, cl, name):
         PyTango.Device_4Impl.__init__(self,cl,name)
         self.debug_stream("In __init__()")
-        TankDeviceServer.init_device(self)
-        #----- PROTECTED REGION ID(TankDeviceServer.__init__) ENABLED START -----#
+        PreMixDeviceServer.init_device(self)
+        #----- PROTECTED REGION ID(PreMixDeviceServer.__init__) ENABLED START -----#
         
-        #----- PROTECTED REGION END -----#	//	TankDeviceServer.__init__
+        #----- PROTECTED REGION END -----#	//	PreMixDeviceServer.__init__
         
     def delete_device(self):
         self.debug_stream("In delete_device()")
-        #----- PROTECTED REGION ID(TankDeviceServer.delete_device) ENABLED START -----#
+        #----- PROTECTED REGION ID(PreMixDeviceServer.delete_device) ENABLED START -----#
         
-        #----- PROTECTED REGION END -----#	//	TankDeviceServer.delete_device
+        #----- PROTECTED REGION END -----#	//	PreMixDeviceServer.delete_device
 
     def init_device(self):
         self.debug_stream("In init_device()")
         self.get_device_properties(self.get_device_class())
-        self.attr_Weight_read = 0.0
+        self.attr_Temperature_read = 0.0
         self.attr_Pressure_read = 0.0
+        self.attr_PressureIndicator_read = 0.0
         self.attr_Flow_read = 0.0
-        #----- PROTECTED REGION ID(TankDeviceServer.init_device) ENABLED START -----#
+        #----- PROTECTED REGION ID(PreMixDeviceServer.init_device) ENABLED START -----#
         
-        #----- PROTECTED REGION END -----#	//	TankDeviceServer.init_device
+        #----- PROTECTED REGION END -----#	//	PreMixDeviceServer.init_device
 
     def always_executed_hook(self):
         self.debug_stream("In always_excuted_hook()")
-        #----- PROTECTED REGION ID(TankDeviceServer.always_executed_hook) ENABLED START -----#
+        #----- PROTECTED REGION ID(PreMixDeviceServer.always_executed_hook) ENABLED START -----#
         
-        #----- PROTECTED REGION END -----#	//	TankDeviceServer.always_executed_hook
+        #----- PROTECTED REGION END -----#	//	PreMixDeviceServer.always_executed_hook
 
     # -------------------------------------------------------------------------
-    #    TankDeviceServer read/write attribute methods
+    #    PreMixDeviceServer read/write attribute methods
     # -------------------------------------------------------------------------
     
-    def read_Weight(self, attr):
-        self.debug_stream("In read_Weight()")
-        #----- PROTECTED REGION ID(TankDeviceServer.Weight_read) ENABLED START -----#
-        attr.set_value(self.attr_Weight_read)
+    def read_Temperature(self, attr):
+        self.debug_stream("In read_Temperature()")
+        #----- PROTECTED REGION ID(PreMixDeviceServer.Temperature_read) ENABLED START -----#
+        attr.set_value(self.attr_Temperature_read)
         
-        #----- PROTECTED REGION END -----#	//	TankDeviceServer.Weight_read
+        #----- PROTECTED REGION END -----#	//	PreMixDeviceServer.Temperature_read
         
     def read_Pressure(self, attr):
         self.debug_stream("In read_Pressure()")
-        #----- PROTECTED REGION ID(TankDeviceServer.Pressure_read) ENABLED START -----#
+        #----- PROTECTED REGION ID(PreMixDeviceServer.Pressure_read) ENABLED START -----#
         attr.set_value(self.attr_Pressure_read)
         
-        #----- PROTECTED REGION END -----#	//	TankDeviceServer.Pressure_read
+        #----- PROTECTED REGION END -----#	//	PreMixDeviceServer.Pressure_read
+        
+    def read_PressureIndicator(self, attr):
+        self.debug_stream("In read_PressureIndicator()")
+        #----- PROTECTED REGION ID(PreMixDeviceServer.PressureIndicator_read) ENABLED START -----#
+        attr.set_value(self.attr_PressureIndicator_read)
+        
+        #----- PROTECTED REGION END -----#	//	PreMixDeviceServer.PressureIndicator_read
         
     def read_Flow(self, attr):
         self.debug_stream("In read_Flow()")
-        #----- PROTECTED REGION ID(TankDeviceServer.Flow_read) ENABLED START -----#
+        #----- PROTECTED REGION ID(PreMixDeviceServer.Flow_read) ENABLED START -----#
         attr.set_value(self.attr_Flow_read)
         
-        #----- PROTECTED REGION END -----#	//	TankDeviceServer.Flow_read
+        #----- PROTECTED REGION END -----#	//	PreMixDeviceServer.Flow_read
         
     
     
             
     def read_attr_hardware(self, data):
         self.debug_stream("In read_attr_hardware()")
-        #----- PROTECTED REGION ID(TankDeviceServer.read_attr_hardware) ENABLED START -----#
+        #----- PROTECTED REGION ID(PreMixDeviceServer.read_attr_hardware) ENABLED START -----#
         
-        #----- PROTECTED REGION END -----#	//	TankDeviceServer.read_attr_hardware
+        #----- PROTECTED REGION END -----#	//	PreMixDeviceServer.read_attr_hardware
 
 
     # -------------------------------------------------------------------------
-    #    TankDeviceServer command methods
+    #    PreMixDeviceServer command methods
     # -------------------------------------------------------------------------
     
 
-    #----- PROTECTED REGION ID(TankDeviceServer.programmer_methods) ENABLED START -----#
+    #----- PROTECTED REGION ID(PreMixDeviceServer.programmer_methods) ENABLED START -----#
     
-    #----- PROTECTED REGION END -----#	//	TankDeviceServer.programmer_methods
+    #----- PROTECTED REGION END -----#	//	PreMixDeviceServer.programmer_methods
 
-class TankDeviceServerClass(PyTango.DeviceClass):
+class PreMixDeviceServerClass(PyTango.DeviceClass):
     # -------- Add you global class variables here --------------------------
-    #----- PROTECTED REGION ID(TankDeviceServer.global_class_variables) ENABLED START -----#
+    #----- PROTECTED REGION ID(PreMixDeviceServer.global_class_variables) ENABLED START -----#
     
-    #----- PROTECTED REGION END -----#	//	TankDeviceServer.global_class_variables
+    #----- PROTECTED REGION END -----#	//	PreMixDeviceServer.global_class_variables
 
 
     #    Class Properties
@@ -159,7 +167,7 @@ class TankDeviceServerClass(PyTango.DeviceClass):
 
     #    Attribute definitions
     attr_list = {
-        'Weight':
+        'Temperature':
             [[PyTango.DevDouble,
             PyTango.SCALAR,
             PyTango.READ],
@@ -167,6 +175,13 @@ class TankDeviceServerClass(PyTango.DeviceClass):
                 'Polling period': "1000",
             } ],
         'Pressure':
+            [[PyTango.DevDouble,
+            PyTango.SCALAR,
+            PyTango.READ],
+            {
+                'Polling period': "1000",
+            } ],
+        'PressureIndicator':
             [[PyTango.DevDouble,
             PyTango.SCALAR,
             PyTango.READ],
@@ -186,10 +201,10 @@ class TankDeviceServerClass(PyTango.DeviceClass):
 def main():
     try:
         py = PyTango.Util(sys.argv)
-        py.add_class(TankDeviceServerClass, TankDeviceServer, 'TankDeviceServer')
-        #----- PROTECTED REGION ID(TankDeviceServer.add_classes) ENABLED START -----#
+        py.add_class(PreMixDeviceServerClass, PreMixDeviceServer, 'PreMixDeviceServer')
+        #----- PROTECTED REGION ID(PreMixDeviceServer.add_classes) ENABLED START -----#
         
-        #----- PROTECTED REGION END -----#	//	TankDeviceServer.add_classes
+        #----- PROTECTED REGION END -----#	//	PreMixDeviceServer.add_classes
 
         U = PyTango.Util.instance()
         U.server_init()
