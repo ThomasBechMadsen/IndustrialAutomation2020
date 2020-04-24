@@ -78,10 +78,11 @@ class PreMixDeviceServer (PyTango.Device_4Impl):
     def init_device(self):
         self.debug_stream("In init_device()")
         self.get_device_properties(self.get_device_class())
-        self.attr_Temperature_read = 0.0
-        self.attr_Pressure_read = 0.0
-        self.attr_PressureIndicator_read = 0.0
-        self.attr_Flow_read = 0.0
+        self.attr_Temperature301_read = 0.0
+        self.attr_Pressure301_read = 0.0
+        self.attr_PressureIndicator301_read = 0.0
+        self.attr_Flow301_read = 0.0
+        self.attr_Valve300_read = False
         #----- PROTECTED REGION ID(PreMixDeviceServer.init_device) ENABLED START -----#
         
         #----- PROTECTED REGION END -----#	//	PreMixDeviceServer.init_device
@@ -96,33 +97,47 @@ class PreMixDeviceServer (PyTango.Device_4Impl):
     #    PreMixDeviceServer read/write attribute methods
     # -------------------------------------------------------------------------
     
-    def read_Temperature(self, attr):
-        self.debug_stream("In read_Temperature()")
-        #----- PROTECTED REGION ID(PreMixDeviceServer.Temperature_read) ENABLED START -----#
-        attr.set_value(self.attr_Temperature_read)
+    def read_Temperature301(self, attr):
+        self.debug_stream("In read_Temperature301()")
+        #----- PROTECTED REGION ID(PreMixDeviceServer.Temperature301_read) ENABLED START -----#
+        attr.set_value(self.attr_Temperature301_read)
         
-        #----- PROTECTED REGION END -----#	//	PreMixDeviceServer.Temperature_read
+        #----- PROTECTED REGION END -----#	//	PreMixDeviceServer.Temperature301_read
         
-    def read_Pressure(self, attr):
-        self.debug_stream("In read_Pressure()")
-        #----- PROTECTED REGION ID(PreMixDeviceServer.Pressure_read) ENABLED START -----#
-        attr.set_value(self.attr_Pressure_read)
+    def read_Pressure301(self, attr):
+        self.debug_stream("In read_Pressure301()")
+        #----- PROTECTED REGION ID(PreMixDeviceServer.Pressure301_read) ENABLED START -----#
+        attr.set_value(self.attr_Pressure301_read)
         
-        #----- PROTECTED REGION END -----#	//	PreMixDeviceServer.Pressure_read
+        #----- PROTECTED REGION END -----#	//	PreMixDeviceServer.Pressure301_read
         
-    def read_PressureIndicator(self, attr):
-        self.debug_stream("In read_PressureIndicator()")
-        #----- PROTECTED REGION ID(PreMixDeviceServer.PressureIndicator_read) ENABLED START -----#
-        attr.set_value(self.attr_PressureIndicator_read)
+    def read_PressureIndicator301(self, attr):
+        self.debug_stream("In read_PressureIndicator301()")
+        #----- PROTECTED REGION ID(PreMixDeviceServer.PressureIndicator301_read) ENABLED START -----#
+        attr.set_value(self.attr_PressureIndicator301_read)
         
-        #----- PROTECTED REGION END -----#	//	PreMixDeviceServer.PressureIndicator_read
+        #----- PROTECTED REGION END -----#	//	PreMixDeviceServer.PressureIndicator301_read
         
-    def read_Flow(self, attr):
-        self.debug_stream("In read_Flow()")
-        #----- PROTECTED REGION ID(PreMixDeviceServer.Flow_read) ENABLED START -----#
-        attr.set_value(self.attr_Flow_read)
+    def read_Flow301(self, attr):
+        self.debug_stream("In read_Flow301()")
+        #----- PROTECTED REGION ID(PreMixDeviceServer.Flow301_read) ENABLED START -----#
+        attr.set_value(self.attr_Flow301_read)
         
-        #----- PROTECTED REGION END -----#	//	PreMixDeviceServer.Flow_read
+        #----- PROTECTED REGION END -----#	//	PreMixDeviceServer.Flow301_read
+        
+    def read_Valve300(self, attr):
+        self.debug_stream("In read_Valve300()")
+        #----- PROTECTED REGION ID(PreMixDeviceServer.Valve300_read) ENABLED START -----#
+        attr.set_value(self.attr_Valve300_read)
+        
+        #----- PROTECTED REGION END -----#	//	PreMixDeviceServer.Valve300_read
+        
+    def write_Valve300(self, attr):
+        self.debug_stream("In write_Valve300()")
+        data = attr.get_write_value()
+        #----- PROTECTED REGION ID(PreMixDeviceServer.Valve300_write) ENABLED START -----#
+        
+        #----- PROTECTED REGION END -----#	//	PreMixDeviceServer.Valve300_write
         
     
     
@@ -167,33 +182,40 @@ class PreMixDeviceServerClass(PyTango.DeviceClass):
 
     #    Attribute definitions
     attr_list = {
-        'Temperature':
+        'Temperature301':
             [[PyTango.DevDouble,
             PyTango.SCALAR,
             PyTango.READ],
             {
                 'Polling period': "1000",
             } ],
-        'Pressure':
+        'Pressure301':
             [[PyTango.DevDouble,
             PyTango.SCALAR,
             PyTango.READ],
             {
                 'Polling period': "1000",
             } ],
-        'PressureIndicator':
+        'PressureIndicator301':
             [[PyTango.DevDouble,
             PyTango.SCALAR,
             PyTango.READ],
             {
                 'Polling period': "1000",
             } ],
-        'Flow':
+        'Flow301':
             [[PyTango.DevDouble,
             PyTango.SCALAR,
             PyTango.READ],
             {
                 'Polling period': "1000",
+            } ],
+        'Valve300':
+            [[PyTango.DevBoolean,
+            PyTango.SCALAR,
+            PyTango.READ_WRITE],
+            {
+                'Memorized':"true_without_hard_applied"
             } ],
         }
 

@@ -81,6 +81,7 @@ class TankDeviceServer (PyTango.Device_4Impl):
         self.attr_Weight_read = 0.0
         self.attr_Pressure_read = 0.0
         self.attr_Flow_read = 0.0
+        self.attr_Valve_read = False
         #----- PROTECTED REGION ID(TankDeviceServer.init_device) ENABLED START -----#
         
         #----- PROTECTED REGION END -----#	//	TankDeviceServer.init_device
@@ -115,6 +116,20 @@ class TankDeviceServer (PyTango.Device_4Impl):
         attr.set_value(self.attr_Flow_read)
         
         #----- PROTECTED REGION END -----#	//	TankDeviceServer.Flow_read
+        
+    def read_Valve(self, attr):
+        self.debug_stream("In read_Valve()")
+        #----- PROTECTED REGION ID(TankDeviceServer.Valve_read) ENABLED START -----#
+        attr.set_value(self.attr_Valve_read)
+        
+        #----- PROTECTED REGION END -----#	//	TankDeviceServer.Valve_read
+        
+    def write_Valve(self, attr):
+        self.debug_stream("In write_Valve()")
+        data = attr.get_write_value()
+        #----- PROTECTED REGION ID(TankDeviceServer.Valve_write) ENABLED START -----#
+        
+        #----- PROTECTED REGION END -----#	//	TankDeviceServer.Valve_write
         
     
     
@@ -179,6 +194,13 @@ class TankDeviceServerClass(PyTango.DeviceClass):
             PyTango.READ],
             {
                 'Polling period': "1000",
+            } ],
+        'Valve':
+            [[PyTango.DevBoolean,
+            PyTango.SCALAR,
+            PyTango.READ_WRITE],
+            {
+                'Memorized':"true_without_hard_applied"
             } ],
         }
 
