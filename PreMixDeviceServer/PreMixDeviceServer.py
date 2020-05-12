@@ -45,6 +45,8 @@ __docformat__ = 'restructuredtext'
 import PyTango
 import sys
 # Add additional import
+import random
+
 #----- PROTECTED REGION ID(PreMixDeviceServer.additionnal_import) ENABLED START -----#
 
 #----- PROTECTED REGION END -----#	//	PreMixDeviceServer.additionnal_import
@@ -100,6 +102,8 @@ class PreMixDeviceServer (PyTango.Device_4Impl):
     def read_Temperature301(self, attr):
         self.debug_stream("In read_Temperature301()")
         #----- PROTECTED REGION ID(PreMixDeviceServer.Temperature301_read) ENABLED START -----#
+	self.attr_Temperature301_read = random.uniform(0,100)
+
         attr.set_value(self.attr_Temperature301_read)
         
         #----- PROTECTED REGION END -----#	//	PreMixDeviceServer.Temperature301_read
@@ -107,6 +111,8 @@ class PreMixDeviceServer (PyTango.Device_4Impl):
     def read_Pressure301(self, attr):
         self.debug_stream("In read_Pressure301()")
         #----- PROTECTED REGION ID(PreMixDeviceServer.Pressure301_read) ENABLED START -----#
+	self.attr_Pressure301_read = random.uniform(0,10)
+
         attr.set_value(self.attr_Pressure301_read)
         
         #----- PROTECTED REGION END -----#	//	PreMixDeviceServer.Pressure301_read
@@ -114,6 +120,8 @@ class PreMixDeviceServer (PyTango.Device_4Impl):
     def read_PressureIndicator301(self, attr):
         self.debug_stream("In read_PressureIndicator301()")
         #----- PROTECTED REGION ID(PreMixDeviceServer.PressureIndicator301_read) ENABLED START -----#
+	self.attr_PressureIndicator301_read = random.uniform(0,10)
+
         attr.set_value(self.attr_PressureIndicator301_read)
         
         #----- PROTECTED REGION END -----#	//	PreMixDeviceServer.PressureIndicator301_read
@@ -121,6 +129,8 @@ class PreMixDeviceServer (PyTango.Device_4Impl):
     def read_Flow301(self, attr):
         self.debug_stream("In read_Flow301()")
         #----- PROTECTED REGION ID(PreMixDeviceServer.Flow301_read) ENABLED START -----#
+	self.attr_Flow301_read = random.uniform(0,1)
+
         attr.set_value(self.attr_Flow301_read)
         
         #----- PROTECTED REGION END -----#	//	PreMixDeviceServer.Flow301_read

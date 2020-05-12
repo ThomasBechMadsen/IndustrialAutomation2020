@@ -45,6 +45,8 @@ __docformat__ = 'restructuredtext'
 import PyTango
 import sys
 # Add additional import
+import random
+
 #----- PROTECTED REGION ID(TankDeviceServer.additionnal_import) ENABLED START -----#
 
 #----- PROTECTED REGION END -----#	//	TankDeviceServer.additionnal_import
@@ -99,6 +101,8 @@ class TankDeviceServer (PyTango.Device_4Impl):
     def read_Weight(self, attr):
         self.debug_stream("In read_Weight()")
         #----- PROTECTED REGION ID(TankDeviceServer.Weight_read) ENABLED START -----#
+	self.attr_Weight_read = random.uniform(0,100)
+
         attr.set_value(self.attr_Weight_read)
         
         #----- PROTECTED REGION END -----#	//	TankDeviceServer.Weight_read
@@ -106,6 +110,8 @@ class TankDeviceServer (PyTango.Device_4Impl):
     def read_Pressure(self, attr):
         self.debug_stream("In read_Pressure()")
         #----- PROTECTED REGION ID(TankDeviceServer.Pressure_read) ENABLED START -----#
+	self.attr_Pressure_read = random.uniform(0,10)
+
         attr.set_value(self.attr_Pressure_read)
         
         #----- PROTECTED REGION END -----#	//	TankDeviceServer.Pressure_read
@@ -113,6 +119,8 @@ class TankDeviceServer (PyTango.Device_4Impl):
     def read_Flow(self, attr):
         self.debug_stream("In read_Flow()")
         #----- PROTECTED REGION ID(TankDeviceServer.Flow_read) ENABLED START -----#
+	self.attr_Flow_read = random.uniform(0,1)
+
         attr.set_value(self.attr_Flow_read)
         
         #----- PROTECTED REGION END -----#	//	TankDeviceServer.Flow_read

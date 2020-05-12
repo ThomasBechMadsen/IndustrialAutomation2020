@@ -45,6 +45,8 @@ __docformat__ = 'restructuredtext'
 import PyTango
 import sys
 # Add additional import
+import random
+
 #----- PROTECTED REGION ID(MRUDeviceServer.additionnal_import) ENABLED START -----#
 
 #----- PROTECTED REGION END -----#	//	MRUDeviceServer.additionnal_import
@@ -100,6 +102,8 @@ class MRUDeviceServer (PyTango.Device_4Impl):
     def read_Weight401(self, attr):
         self.debug_stream("In read_Weight401()")
         #----- PROTECTED REGION ID(MRUDeviceServer.Weight401_read) ENABLED START -----#
+	self.attr_Weight401_read = random.uniform(0,100)
+
         attr.set_value(self.attr_Weight401_read)
         
         #----- PROTECTED REGION END -----#	//	MRUDeviceServer.Weight401_read
@@ -107,6 +111,8 @@ class MRUDeviceServer (PyTango.Device_4Impl):
     def read_Pressure402(self, attr):
         self.debug_stream("In read_Pressure402()")
         #----- PROTECTED REGION ID(MRUDeviceServer.Pressure402_read) ENABLED START -----#
+	self.attr_Pressure402_read = random.uniform(0,10)
+
         attr.set_value(self.attr_Pressure402_read)
         
         #----- PROTECTED REGION END -----#	//	MRUDeviceServer.Pressure402_read
@@ -114,6 +120,8 @@ class MRUDeviceServer (PyTango.Device_4Impl):
     def read_Pressure401(self, attr):
         self.debug_stream("In read_Pressure401()")
         #----- PROTECTED REGION ID(MRUDeviceServer.Pressure401_read) ENABLED START -----#
+	self.attr_Pressure401_read = random.uniform(0,10)
+
         attr.set_value(self.attr_Pressure401_read)
         
         #----- PROTECTED REGION END -----#	//	MRUDeviceServer.Pressure401_read
@@ -121,6 +129,8 @@ class MRUDeviceServer (PyTango.Device_4Impl):
     def read_Flow401(self, attr):
         self.debug_stream("In read_Flow401()")
         #----- PROTECTED REGION ID(MRUDeviceServer.Flow401_read) ENABLED START -----#
+	self.attr_Flow401_read = random.uniform(0,1)
+
         attr.set_value(self.attr_Flow401_read)
         
         #----- PROTECTED REGION END -----#	//	MRUDeviceServer.Flow401_read
@@ -128,6 +138,8 @@ class MRUDeviceServer (PyTango.Device_4Impl):
     def read_Flow402(self, attr):
         self.debug_stream("In read_Flow402()")
         #----- PROTECTED REGION ID(MRUDeviceServer.Flow402_read) ENABLED START -----#
+	self.attr_Flow402_read = random.uniform(0,1)
+
         attr.set_value(self.attr_Flow402_read)
         
         #----- PROTECTED REGION END -----#	//	MRUDeviceServer.Flow402_read
