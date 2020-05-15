@@ -45,9 +45,8 @@ __docformat__ = 'restructuredtext'
 import PyTango
 import sys
 # Add additional import
-import random
-
 #----- PROTECTED REGION ID(TankDeviceServer.additionnal_import) ENABLED START -----#
+import random
 
 #----- PROTECTED REGION END -----#	//	TankDeviceServer.additionnal_import
 
@@ -82,7 +81,6 @@ class TankDeviceServer (PyTango.Device_4Impl):
         self.get_device_properties(self.get_device_class())
         self.attr_Weight_read = 0.0
         self.attr_Pressure_read = 0.0
-        self.attr_Flow_read = 0.0
         self.attr_Valve_read = False
         #----- PROTECTED REGION ID(TankDeviceServer.init_device) ENABLED START -----#
         
@@ -116,15 +114,6 @@ class TankDeviceServer (PyTango.Device_4Impl):
         
         #----- PROTECTED REGION END -----#	//	TankDeviceServer.Pressure_read
         
-    def read_Flow(self, attr):
-        self.debug_stream("In read_Flow()")
-        #----- PROTECTED REGION ID(TankDeviceServer.Flow_read) ENABLED START -----#
-	self.attr_Flow_read = random.uniform(0,1)
-
-        attr.set_value(self.attr_Flow_read)
-        
-        #----- PROTECTED REGION END -----#	//	TankDeviceServer.Flow_read
-        
     def read_Valve(self, attr):
         self.debug_stream("In read_Valve()")
         #----- PROTECTED REGION ID(TankDeviceServer.Valve_read) ENABLED START -----#
@@ -136,6 +125,7 @@ class TankDeviceServer (PyTango.Device_4Impl):
         self.debug_stream("In write_Valve()")
         data = attr.get_write_value()
         #----- PROTECTED REGION ID(TankDeviceServer.Valve_write) ENABLED START -----#
+	self.attr_Valve_read = data
         
         #----- PROTECTED REGION END -----#	//	TankDeviceServer.Valve_write
         
@@ -187,21 +177,32 @@ class TankDeviceServerClass(PyTango.DeviceClass):
             PyTango.SCALAR,
             PyTango.READ],
             {
-                'Polling period': "1000",
+                'label': "Weight",
+                'unit': "kg",
+                'standard unit': "kg",
+                'display unit': "kg",
+                'max value': "100",
+                'min value': "0",
+                'min alarm': "1",
+                'min warning': "2",
+                'Polling period': "100",
             } ],
         'Pressure':
             [[PyTango.DevDouble,
             PyTango.SCALAR,
             PyTango.READ],
             {
-                'Polling period': "1000",
-            } ],
-        'Flow':
-            [[PyTango.DevDouble,
-            PyTango.SCALAR,
-            PyTango.READ],
-            {
-                'Polling period': "1000",
+                'label': "Pressure",
+                'unit': "Pa",
+                'standard unit': "Pa",
+                'display unit': "Pa",
+                'max value': "10",
+                'min value': "0",
+                'max alarm': "9",
+                'min alarm': "1",
+                'max warning': "8",
+                'min warning': "2",
+                'Polling period': "100",
             } ],
         'Valve':
             [[PyTango.DevBoolean,

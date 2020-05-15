@@ -322,125 +322,26 @@ JDFile v11 {
     origin:656,117
     name:"Line"
   }
-  JDGroup {
-    summit:644,41,723,66
-    origin:59.5,12.5
-    name:"JDGroup"
-    children: {
-      JDPolyline {
-        summit:644,65,668,65,644,41,668,41,644,65
-        origin:656,53
-        fillStyle:1
-        name:"Polyline"
-      }
-      JDLabel {
-        summit:667,45,723,66
-        origin:695,56
-        lineWidth:0
-        name:"Label"
-        text:"PV-300"
-      }
+  JDPolyline {
+    summit:216,389,240,389,216,365,240,365,216,389
+    origin:228,377
+    fillStyle:1
+    name:"Polyline"
+    backgroundmapper:{
+      mapping_type:2
+      mode:0
+      default:128,128,128
+      map:0,0,255,255,255
+      map:1,1,0,0,0
     }
   }
-  JDGroup {
-    summit:454,365,533,390
-    origin:39.5,12.5
-    name:"JDGroup"
-    children: {
-      JDPolyline {
-        summit:454,389,478,389,454,365,478,365,454,389
-        origin:466,377
-        fillStyle:1
-        name:"Polyline"
-      }
-      JDLabel {
-        summit:477,369,533,390
-        origin:505,380
-        lineWidth:0
-        name:"Label"
-        text:"PV-200"
-      }
-    }
-  }
-  JDGroup {
-    summit:216,365,295,390
-    origin:39.5,12.5
-    name:"JDGroup"
-    children: {
-      JDPolyline {
-        summit:216,389,240,389,216,365,240,365,216,389
-        origin:228,377
-        fillStyle:1
-        name:"Polyline"
-      }
-      JDLabel {
-        summit:239,369,295,390
-        origin:267,380
-        lineWidth:0
-        name:"Label"
-        text:"PV-100"
-      }
-    }
-  }
-  JDGroup {
-    summit:644,365,723,390
-    origin:59.5,12.5
-    name:"JDGroup"
-    children: {
-      JDPolyline {
-        summit:644,389,668,389,644,365,668,365,644,389
-        origin:656,377
-        fillStyle:1
-        name:"Polyline"
-      }
-      JDLabel {
-        summit:667,369,723,390
-        origin:695,380
-        lineWidth:0
-        name:"Label"
-        text:"PV-301"
-      }
-    }
-  }
-  JDGroup {
-    summit:333,416,412,441
-    origin:39.5,12.5
-    name:"JDGroup"
-    children: {
-      JDPolyline {
-        summit:333,440,357,440,333,416,357,416,333,440
-        origin:345,428
-        fillStyle:1
-        name:"Polyline"
-      }
-      JDLabel {
-        summit:356,420,412,441
-        origin:384,431
-        lineWidth:0
-        name:"Label"
-        text:"PV-101"
-      }
-    }
-  }
-  JDGroup {
-    summit:571,416,650,441
-    origin:39.5,5.5
-    name:"JDGroup"
-    children: {
-      JDPolyline {
-        summit:571,440,595,440,571,416,595,416,571,440
-        origin:583,428
-        fillStyle:1
-        name:"Polyline"
-      }
-      JDLabel {
-        summit:594,420,650,441
-        origin:622,431
-        lineWidth:0
-        name:"Label"
-        text:"PV-201"
-      }
-    }
+  JDLabel {
+    summit:244,360,300,381
+    origin:272,371
+    lineWidth:0
+    name:"Label"
+    text:"PV-100"
+    hAlignment:1
   }
   JDGroup {
     summit:716,416,898,709
@@ -467,8 +368,8 @@ JDFile v11 {
     name:"Ellipse"
   }
   JDEllipse {
-    summit:869,710,898,740
-    origin:884,725
+    summit:869,709,898,739
+    origin:884,724
     name:"Ellipse"
   }
   JDPolyline {
@@ -476,14 +377,7 @@ JDFile v11 {
     origin:872,764
     fillStyle:1
     name:"Polyline"
-    gradY2:-70.7
-  }
-  JDLabel {
-    summit:886,755,942,776
-    origin:914,766
-    lineWidth:0
-    name:"Label"
-    text:"PV-400"
+    gradY2:-70.0
   }
   JDLabel {
     summit:735,552,791,573
@@ -504,5 +398,216 @@ JDFile v11 {
     }
     className:"fr.esrf.tangoatk.widget.attribute.SimpleEnumScalarViewer"
     font:"Dialog",0,12
+  }
+  JDSwingObject {
+    summit:244,375,335,397
+    origin:290,386
+    foreground:51,51,51
+    background:238,238,238
+    fillStyle:1
+    lineWidth:0
+    name:"epfl/ia/Tank1/Valve"
+    extensions:{
+      text:"Open"
+    }
+    className:"fr.esrf.tangoatk.widget.attribute.BooleanScalarCheckBoxViewer"
+    font:"Dialog",1,12
+  }
+  JDPolyline {
+    summit:333,440,357,440,333,416,357,416,333,440
+    origin:345,428
+    fillStyle:1
+    name:"Polyline"
+    backgroundmapper:{
+      mapping_type:2
+      mode:0
+      default:128,128,128
+      map:0,0,255,255,255
+      map:1,1,0,0,0
+    }
+  }
+  JDLabel {
+    summit:361,411,417,432
+    origin:389,422
+    lineWidth:0
+    name:"Label"
+    text:"PV-101"
+    hAlignment:1
+  }
+  JDSwingObject {
+    summit:361,426,452,448
+    origin:407,437
+    foreground:51,51,51
+    background:238,238,238
+    fillStyle:1
+    lineWidth:0
+    name:"epfl/ia/Distribution/Valve101"
+    extensions:{
+      text:"Open"
+    }
+    className:"fr.esrf.tangoatk.widget.attribute.BooleanScalarCheckBoxViewer"
+    font:"Dialog",1,12
+  }
+  JDPolyline {
+    summit:644,67,668,67,644,43,668,43,644,67
+    origin:656,55
+    fillStyle:1
+    name:"Polyline"
+    backgroundmapper:{
+      mapping_type:2
+      mode:0
+      default:128,128,128
+      map:0,0,255,255,255
+      map:1,1,0,0,0
+    }
+  }
+  JDLabel {
+    summit:672,38,728,59
+    origin:700,49
+    lineWidth:0
+    name:"Label"
+    text:"PV-300"
+    hAlignment:1
+  }
+  JDSwingObject {
+    summit:672,53,763,75
+    origin:718,64
+    foreground:51,51,51
+    background:238,238,238
+    fillStyle:1
+    lineWidth:0
+    name:"epfl/ia/PreMix/Valve300"
+    extensions:{
+      text:"Open"
+    }
+    className:"fr.esrf.tangoatk.widget.attribute.BooleanScalarCheckBoxViewer"
+    font:"Dialog",1,12
+  }
+  JDPolyline {
+    summit:454,388,478,388,454,364,478,364,454,388
+    origin:466,376
+    fillStyle:1
+    name:"Polyline"
+    backgroundmapper:{
+      mapping_type:2
+      mode:0
+      default:128,128,128
+      map:0,0,255,255,255
+      map:1,1,0,0,0
+    }
+  }
+  JDLabel {
+    summit:482,359,538,380
+    origin:510,370
+    lineWidth:0
+    name:"Label"
+    text:"PV-200"
+    hAlignment:1
+  }
+  JDSwingObject {
+    summit:482,374,573,396
+    origin:528,385
+    foreground:51,51,51
+    background:238,238,238
+    fillStyle:1
+    lineWidth:0
+    name:"epfl/ia/Tank2/Valve"
+    extensions:{
+      text:"Open"
+    }
+    className:"fr.esrf.tangoatk.widget.attribute.BooleanScalarCheckBoxViewer"
+    font:"Dialog",1,12
+  }
+  JDPolyline {
+    summit:644,387,668,387,644,363,668,363,644,387
+    origin:656,375
+    fillStyle:1
+    name:"Polyline"
+    backgroundmapper:{
+      mapping_type:2
+      mode:0
+      default:128,128,128
+      map:0,0,255,255,255
+      map:1,1,0,0,0
+    }
+  }
+  JDLabel {
+    summit:672,358,728,379
+    origin:700,369
+    lineWidth:0
+    name:"Label"
+    text:"PV-301"
+    hAlignment:1
+  }
+  JDSwingObject {
+    summit:672,373,763,395
+    origin:718,384
+    foreground:51,51,51
+    background:238,238,238
+    fillStyle:1
+    lineWidth:0
+    name:"epfl/ia/Distribution/Valve301"
+    extensions:{
+      text:"Open"
+    }
+    className:"fr.esrf.tangoatk.widget.attribute.BooleanScalarCheckBoxViewer"
+    font:"Dialog",1,12
+  }
+  JDPolyline {
+    summit:571,440,595,440,571,416,595,416,571,440
+    origin:583,428
+    fillStyle:1
+    name:"Polyline"
+    backgroundmapper:{
+      mapping_type:2
+      mode:0
+      default:128,128,128
+      map:0,0,255,255,255
+      map:1,1,0,0,0
+    }
+  }
+  JDLabel {
+    summit:599,411,655,432
+    origin:627,422
+    lineWidth:0
+    name:"Label"
+    text:"PV-201"
+    hAlignment:1
+  }
+  JDSwingObject {
+    summit:599,426,690,448
+    origin:645,437
+    foreground:51,51,51
+    background:238,238,238
+    fillStyle:1
+    lineWidth:0
+    name:"epfl/ia/Distribution/Valve201"
+    extensions:{
+      text:"Open"
+    }
+    className:"fr.esrf.tangoatk.widget.attribute.BooleanScalarCheckBoxViewer"
+    font:"Dialog",1,12
+  }
+  JDLabel {
+    summit:889,748,945,769
+    origin:917,759
+    lineWidth:0
+    name:"Label"
+    text:"PV-400"
+    hAlignment:1
+  }
+  JDSwingObject {
+    summit:889,763,980,785
+    origin:935,774
+    foreground:51,51,51
+    background:238,238,238
+    fillStyle:1
+    lineWidth:0
+    name:"epfl/ia/Distribution/Valve400"
+    extensions:{
+      text:"Open"
+    }
+    className:"fr.esrf.tangoatk.widget.attribute.BooleanScalarCheckBoxViewer"
+    font:"Dialog",1,12
   }
 }

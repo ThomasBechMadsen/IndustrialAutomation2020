@@ -46,6 +46,7 @@ import PyTango
 import sys
 # Add additional import
 #----- PROTECTED REGION ID(DistributionDeviceServer.additionnal_import) ENABLED START -----#
+import random
 
 #----- PROTECTED REGION END -----#	//	DistributionDeviceServer.additionnal_import
 
@@ -81,6 +82,7 @@ class DistributionDeviceServer (PyTango.Device_4Impl):
         self.attr_Valve101_read = False
         self.attr_Valve201_read = False
         self.attr_Valve301_read = False
+        self.attr_Valve400_read = False
         #----- PROTECTED REGION ID(DistributionDeviceServer.init_device) ENABLED START -----#
         
         #----- PROTECTED REGION END -----#	//	DistributionDeviceServer.init_device
@@ -106,7 +108,8 @@ class DistributionDeviceServer (PyTango.Device_4Impl):
         self.debug_stream("In write_Valve101()")
         data = attr.get_write_value()
         #----- PROTECTED REGION ID(DistributionDeviceServer.Valve101_write) ENABLED START -----#
-        
+	self.attr_Valve101_read = data        
+
         #----- PROTECTED REGION END -----#	//	DistributionDeviceServer.Valve101_write
         
     def read_Valve201(self, attr):
@@ -120,7 +123,8 @@ class DistributionDeviceServer (PyTango.Device_4Impl):
         self.debug_stream("In write_Valve201()")
         data = attr.get_write_value()
         #----- PROTECTED REGION ID(DistributionDeviceServer.Valve201_write) ENABLED START -----#
-        
+	self.attr_Valve201_read = data            
+
         #----- PROTECTED REGION END -----#	//	DistributionDeviceServer.Valve201_write
         
     def read_Valve301(self, attr):
@@ -134,8 +138,24 @@ class DistributionDeviceServer (PyTango.Device_4Impl):
         self.debug_stream("In write_Valve301()")
         data = attr.get_write_value()
         #----- PROTECTED REGION ID(DistributionDeviceServer.Valve301_write) ENABLED START -----#
-        
+        self.attr_Valve301_read = data    
+
         #----- PROTECTED REGION END -----#	//	DistributionDeviceServer.Valve301_write
+        
+    def read_Valve400(self, attr):
+        self.debug_stream("In read_Valve400()")
+        #----- PROTECTED REGION ID(DistributionDeviceServer.Valve400_read) ENABLED START -----#
+        attr.set_value(self.attr_Valve400_read)
+        
+        #----- PROTECTED REGION END -----#	//	DistributionDeviceServer.Valve400_read
+        
+    def write_Valve400(self, attr):
+        self.debug_stream("In write_Valve400()")
+        data = attr.get_write_value()
+        #----- PROTECTED REGION ID(DistributionDeviceServer.Valve400_write) ENABLED START -----#
+	self.attr_Valve400_read = data    
+        
+        #----- PROTECTED REGION END -----#	//	DistributionDeviceServer.Valve400_write
         
     
     
@@ -195,6 +215,13 @@ class DistributionDeviceServerClass(PyTango.DeviceClass):
                 'Memorized':"true_without_hard_applied"
             } ],
         'Valve301':
+            [[PyTango.DevBoolean,
+            PyTango.SCALAR,
+            PyTango.READ_WRITE],
+            {
+                'Memorized':"true_without_hard_applied"
+            } ],
+        'Valve400':
             [[PyTango.DevBoolean,
             PyTango.SCALAR,
             PyTango.READ_WRITE],

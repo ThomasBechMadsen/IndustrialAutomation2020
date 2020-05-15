@@ -45,9 +45,8 @@ __docformat__ = 'restructuredtext'
 import PyTango
 import sys
 # Add additional import
-import random
-
 #----- PROTECTED REGION ID(PreMixDeviceServer.additionnal_import) ENABLED START -----#
+import random
 
 #----- PROTECTED REGION END -----#	//	PreMixDeviceServer.additionnal_import
 
@@ -82,7 +81,6 @@ class PreMixDeviceServer (PyTango.Device_4Impl):
         self.get_device_properties(self.get_device_class())
         self.attr_Temperature301_read = 0.0
         self.attr_Pressure301_read = 0.0
-        self.attr_PressureIndicator301_read = 0.0
         self.attr_Flow301_read = 0.0
         self.attr_Valve300_read = False
         #----- PROTECTED REGION ID(PreMixDeviceServer.init_device) ENABLED START -----#
@@ -117,15 +115,6 @@ class PreMixDeviceServer (PyTango.Device_4Impl):
         
         #----- PROTECTED REGION END -----#	//	PreMixDeviceServer.Pressure301_read
         
-    def read_PressureIndicator301(self, attr):
-        self.debug_stream("In read_PressureIndicator301()")
-        #----- PROTECTED REGION ID(PreMixDeviceServer.PressureIndicator301_read) ENABLED START -----#
-	self.attr_PressureIndicator301_read = random.uniform(0,10)
-
-        attr.set_value(self.attr_PressureIndicator301_read)
-        
-        #----- PROTECTED REGION END -----#	//	PreMixDeviceServer.PressureIndicator301_read
-        
     def read_Flow301(self, attr):
         self.debug_stream("In read_Flow301()")
         #----- PROTECTED REGION ID(PreMixDeviceServer.Flow301_read) ENABLED START -----#
@@ -146,6 +135,7 @@ class PreMixDeviceServer (PyTango.Device_4Impl):
         self.debug_stream("In write_Valve300()")
         data = attr.get_write_value()
         #----- PROTECTED REGION ID(PreMixDeviceServer.Valve300_write) ENABLED START -----#
+	self.attr_Valve300_read = data
         
         #----- PROTECTED REGION END -----#	//	PreMixDeviceServer.Valve300_write
         
@@ -197,6 +187,14 @@ class PreMixDeviceServerClass(PyTango.DeviceClass):
             PyTango.SCALAR,
             PyTango.READ],
             {
+                'label': "Temperature",
+                'unit': "°C",
+                'standard unit': "°C",
+                'display unit': "°C",
+                'max value': "100",
+                'min value': "0",
+                'max alarm': "90",
+                'max warning': "80",
                 'Polling period': "1000",
             } ],
         'Pressure301':
@@ -204,13 +202,16 @@ class PreMixDeviceServerClass(PyTango.DeviceClass):
             PyTango.SCALAR,
             PyTango.READ],
             {
-                'Polling period': "1000",
-            } ],
-        'PressureIndicator301':
-            [[PyTango.DevDouble,
-            PyTango.SCALAR,
-            PyTango.READ],
-            {
+                'label': "Pressure",
+                'unit': "Pa",
+                'standard unit': "Pa",
+                'display unit': "Pa",
+                'max value': "10",
+                'min value': "0",
+                'max alarm': "9",
+                'min alarm': "1",
+                'max warning': "8",
+                'min warning': "2",
                 'Polling period': "1000",
             } ],
         'Flow301':
@@ -218,6 +219,16 @@ class PreMixDeviceServerClass(PyTango.DeviceClass):
             PyTango.SCALAR,
             PyTango.READ],
             {
+                'label': "Flow",
+                'unit': "L/s",
+                'standard unit': "L/s",
+                'display unit': "L/s",
+                'max value': "1",
+                'min value': "0",
+                'max alarm': "0.9",
+                'min alarm': "0.1",
+                'max warning': "0.8",
+                'min warning': "0.2",
                 'Polling period': "1000",
             } ],
         'Valve300':
