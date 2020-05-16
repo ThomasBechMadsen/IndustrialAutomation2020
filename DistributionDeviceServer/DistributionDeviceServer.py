@@ -83,6 +83,7 @@ class DistributionDeviceServer (PyTango.Device_4Impl):
         self.attr_Valve201_read = False
         self.attr_Valve301_read = False
         self.attr_Valve400_read = False
+        self.attr_MRUStatus_read = False
         #----- PROTECTED REGION ID(DistributionDeviceServer.init_device) ENABLED START -----#
         
         #----- PROTECTED REGION END -----#	//	DistributionDeviceServer.init_device
@@ -157,6 +158,21 @@ class DistributionDeviceServer (PyTango.Device_4Impl):
         
         #----- PROTECTED REGION END -----#	//	DistributionDeviceServer.Valve400_write
         
+    def read_MRUStatus(self, attr):
+        self.debug_stream("In read_MRUStatus()")
+        #----- PROTECTED REGION ID(DistributionDeviceServer.MRUStatus_read) ENABLED START -----#
+        attr.set_value(self.attr_MRUStatus_read)
+        
+        #----- PROTECTED REGION END -----#	//	DistributionDeviceServer.MRUStatus_read
+        
+    def write_MRUStatus(self, attr):
+        self.debug_stream("In write_MRUStatus()")
+        data = attr.get_write_value()
+        #----- PROTECTED REGION ID(DistributionDeviceServer.MRUStatus_write) ENABLED START -----#
+        self.attr_MRUStatus_read = data
+
+        #----- PROTECTED REGION END -----#	//	DistributionDeviceServer.MRUStatus_write
+        
     
     
             
@@ -222,6 +238,13 @@ class DistributionDeviceServerClass(PyTango.DeviceClass):
                 'Memorized':"true_without_hard_applied"
             } ],
         'Valve400':
+            [[PyTango.DevBoolean,
+            PyTango.SCALAR,
+            PyTango.READ_WRITE],
+            {
+                'Memorized':"true_without_hard_applied"
+            } ],
+        'MRUStatus':
             [[PyTango.DevBoolean,
             PyTango.SCALAR,
             PyTango.READ_WRITE],
