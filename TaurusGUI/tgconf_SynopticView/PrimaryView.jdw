@@ -1,0 +1,655 @@
+JDFile v11 {
+  Global {
+  }
+  JDLine {
+    summit:726,764,726,342
+    origin:727,548
+    lineWidth:2
+    name:"Line"
+  }
+  JDRectangle {
+    summit:144,476,309,730
+    origin:227,603
+    background:255,51,153
+    name:"Rectangle"
+  }
+  JDLabel {
+    summit:144,455,194,476
+    origin:169,466
+    lineWidth:0
+    name:"Label"
+    text:"Tank1"
+  }
+  JDBar {
+    summit:163,525,291,583
+    origin:227,554
+    fillStyle:1
+    name:"epfl/ia/Tank1/Pressure"
+    maxBar:10.0
+    orientation:0
+  }
+  JDLabel {
+    summit:163,508,235,529
+    origin:194,519
+    lineWidth:0
+    name:"Label"
+    text:"Pressure:"
+  }
+  JDSwingObject {
+    summit:234,509,302,524
+    origin:268,517
+    fillStyle:1
+    lineWidth:0
+    name:"epfl/ia/Tank1/Pressure"
+    extensions:{
+      unitVisible:"true"
+      userFormat:""
+      alarmEnabled:"true"
+      validBackground:"0,255,0"
+      invalidText:"-----"
+    }
+    className:"fr.esrf.tangoatk.widget.attribute.SimpleScalarViewer"
+    font:"Dialog",0,12
+  }
+  JDBar {
+    summit:163,646,291,704
+    origin:227,675
+    fillStyle:1
+    name:"epfl/ia/Tank1/Weight"
+    maxBar:100.0
+    orientation:0
+  }
+  JDLabel {
+    summit:163,629,224,650
+    origin:194,640
+    lineWidth:0
+    name:"Label"
+    text:"Weight:"
+  }
+  JDSwingObject {
+    summit:223,630,291,645
+    origin:257,638
+    fillStyle:1
+    lineWidth:0
+    name:"epfl/ia/Tank1/Weight"
+    extensions:{
+      unitVisible:"true"
+      userFormat:""
+      alarmEnabled:"true"
+      validBackground:"0,255,0"
+      invalidText:"-----"
+    }
+    className:"fr.esrf.tangoatk.widget.attribute.SimpleScalarViewer"
+    font:"Dialog",0,12
+  }
+  JDRectangle {
+    summit:382,475,547,729
+    origin:465,602
+    name:"Rectangle"
+  }
+  JDLabel {
+    summit:382,454,432,475
+    origin:407,465
+    lineWidth:0
+    name:"Label"
+    text:"Tank2"
+  }
+  JDBar {
+    summit:399,524,527,582
+    origin:463,553
+    fillStyle:1
+    name:"epfl/ia/Tank2/Pressure"
+    maxBar:10.0
+    orientation:0
+  }
+  JDLabel {
+    summit:399,507,471,528
+    origin:430,518
+    lineWidth:0
+    name:"Label"
+    text:"Pressure:"
+  }
+  JDSwingObject {
+    summit:470,508,538,523
+    origin:504,516
+    fillStyle:1
+    lineWidth:0
+    name:"epfl/ia/Tank2/Pressure"
+    extensions:{
+      unitVisible:"true"
+      userFormat:""
+      alarmEnabled:"true"
+      validBackground:"0,255,0"
+      invalidText:"-----"
+    }
+    className:"fr.esrf.tangoatk.widget.attribute.SimpleScalarViewer"
+    font:"Dialog",0,12
+  }
+  JDBar {
+    summit:399,645,527,703
+    origin:463,674
+    fillStyle:1
+    name:"epfl/ia/Tank2/Weight"
+    maxBar:100.0
+    orientation:0
+  }
+  JDLabel {
+    summit:399,628,460,649
+    origin:430,639
+    lineWidth:0
+    name:"Label"
+    text:"Weight:"
+  }
+  JDSwingObject {
+    summit:459,629,527,644
+    origin:493,637
+    fillStyle:1
+    lineWidth:0
+    name:"epfl/ia/Tank2/Weight"
+    extensions:{
+      unitVisible:"true"
+      userFormat:""
+      alarmEnabled:"true"
+      validBackground:"0,255,0"
+      invalidText:"-----"
+    }
+    className:"fr.esrf.tangoatk.widget.attribute.SimpleScalarViewer"
+    font:"Dialog",0,12
+  }
+  JDBar {
+    summit:432,156,560,214
+    origin:496,185
+    fillStyle:1
+    name:"epfl/ia/PreMix/Pressure301"
+    maxBar:10.0
+    orientation:0
+  }
+  JDLabel {
+    summit:432,139,504,160
+    origin:463,150
+    lineWidth:0
+    name:"Label"
+    text:"Pressure:"
+  }
+  JDSwingObject {
+    summit:503,140,571,155
+    origin:537,148
+    fillStyle:1
+    lineWidth:0
+    name:"epfl/ia/PreMix/Pressure301"
+    extensions:{
+      unitVisible:"true"
+      userFormat:""
+      alarmEnabled:"true"
+      validBackground:"0,255,0"
+      invalidText:"-----"
+    }
+    className:"fr.esrf.tangoatk.widget.attribute.SimpleScalarViewer"
+    font:"Dialog",0,12
+  }
+  JDBar {
+    summit:586,156,714,214
+    origin:650,185
+    fillStyle:1
+    name:"epfl/ia/PreMix/Flow301"
+    orientation:0
+  }
+  JDLabel {
+    summit:586,139,629,160
+    origin:617,150
+    lineWidth:0
+    name:"Label"
+    text:"Flow:"
+  }
+  JDSwingObject {
+    summit:628,140,696,155
+    origin:662,148
+    fillStyle:1
+    lineWidth:0
+    name:"epfl/ia/PreMix/Flow301"
+    extensions:{
+      unitVisible:"true"
+      userFormat:""
+      alarmEnabled:"true"
+      validBackground:"0,255,0"
+      invalidText:"-----"
+    }
+    className:"fr.esrf.tangoatk.widget.attribute.SimpleScalarViewer"
+    font:"Dialog",0,12
+  }
+  JDBar {
+    summit:738,156,866,214
+    origin:802,185
+    fillStyle:1
+    name:"epfl/ia/PreMix/Temperature301"
+    maxBar:100.0
+    orientation:0
+  }
+  JDLabel {
+    summit:738,139,841,160
+    origin:769,150
+    lineWidth:0
+    name:"Label"
+    text:"Temperature:"
+  }
+  JDSwingObject {
+    summit:839,140,907,155
+    origin:873,148
+    fillStyle:1
+    lineWidth:0
+    name:"epfl/ia/PreMix/Temperature301"
+    extensions:{
+      unitVisible:"true"
+      userFormat:""
+      alarmEnabled:"true"
+      validBackground:"0,255,0"
+      invalidText:"-----"
+    }
+    className:"fr.esrf.tangoatk.widget.attribute.SimpleScalarViewer"
+    font:"Dialog",0,12
+  }
+  JDRectangle {
+    summit:376,111,923,231
+    origin:650,171
+    name:"Rectangle"
+  }
+  JDLabel {
+    summit:377,90,431,111
+    origin:404,101
+    lineWidth:0
+    name:"Label"
+    text:"PreMix"
+  }
+  JDLine {
+    summit:656,342,656,232
+    origin:656,493
+    lineWidth:2
+    name:"Line"
+  }
+  JDLine {
+    summit:228,475,228,343
+    origin:228,409
+    lineWidth:2
+    name:"Line"
+  }
+  JDLine {
+    summit:466,474,466,342
+    origin:466,408
+    lineWidth:2
+    name:"Line"
+  }
+  JDLine {
+    summit:228,342,726,342
+    origin:449,343
+    lineWidth:2
+    name:"Line"
+  }
+  JDGroup {
+    summit:229,406,345,763
+    origin:115,248.5
+    lineWidth:2
+    name:"JDGroup"
+    children: {
+      JDLine {
+        summit:229,406,344,406
+        origin:285,394
+        lineWidth:2
+        name:"Line"
+      }
+      JDLine {
+        summit:345,406,345,763
+        origin:345,585
+        lineWidth:2
+        name:"Line"
+      }
+    }
+  }
+  JDGroup {
+    summit:467,406,583,763
+    origin:353,248.5
+    lineWidth:2
+    name:"JDGroup"
+    children: {
+      JDLine {
+        summit:467,406,582,406
+        origin:523,394
+        lineWidth:2
+        name:"Line"
+      }
+      JDLine {
+        summit:583,406,583,763
+        origin:583,585
+        lineWidth:2
+        name:"Line"
+      }
+    }
+  }
+  JDLine {
+    summit:345,764,916,764
+    origin:580,764
+    lineWidth:2
+    name:"Line"
+  }
+  JDLine {
+    summit:850,710,850,764
+    origin:850,747
+    lineWidth:2
+    name:"Line"
+  }
+  JDLine {
+    summit:656,111,656,62
+    origin:656,117
+    lineWidth:2
+    name:"Line"
+  }
+  JDRectangle {
+    summit:767,433.4514,949,709
+    origin:858,571.2257
+    name:"Rectangle"
+  }
+  JDLabel {
+    summit:768,413,923,432.2884
+    origin:846,423.1034
+    lineWidth:0
+    name:"Label"
+    text:"Mobile Recovery Unit"
+  }
+  JDEllipse {
+    summit:768,709,797,739
+    origin:783,724
+    name:"Ellipse"
+  }
+  JDEllipse {
+    summit:920,709,949,739
+    origin:935,724
+    name:"Ellipse"
+  }
+  JDPolyline {
+    summit:935,776,935,752,911,776,911,752,935,776
+    origin:923,764
+    fillStyle:1
+    name:"Polyline"
+    gradY2:-70.0
+  }
+  JDPolyline {
+    summit:644,67,668,67,644,43,668,43,644,67
+    origin:656,55
+    fillStyle:1
+    name:"Polyline"
+    backgroundmapper:{
+      mapping_type:2
+      mode:0
+      default:128,128,128
+      map:0,0,255,255,255
+      map:1,1,0,0,0
+    }
+  }
+  JDLabel {
+    summit:672,38,728,59
+    origin:700,49
+    lineWidth:0
+    name:"Label"
+    text:"PV-300"
+    hAlignment:1
+  }
+  JDSwingObject {
+    summit:672,53,763,75
+    origin:718,64
+    foreground:51,51,51
+    background:238,238,238
+    fillStyle:1
+    lineWidth:0
+    name:"epfl/ia/PreMix/Valve300"
+    extensions:{
+      text:"Open"
+    }
+    className:"fr.esrf.tangoatk.widget.attribute.BooleanScalarCheckBoxViewer"
+    font:"Dialog",1,12
+  }
+  JDLabel {
+    summit:940,748,996,769
+    origin:968,759
+    lineWidth:0
+    name:"Label"
+    text:"PV-400"
+    hAlignment:1
+  }
+  JDSwingObject {
+    summit:940,763,1031,785
+    origin:986,774
+    foreground:51,51,51
+    background:238,238,238
+    fillStyle:1
+    lineWidth:0
+    name:"epfl/ia/Distribution/Valve400"
+    extensions:{
+      text:"Open"
+    }
+    className:"fr.esrf.tangoatk.widget.attribute.BooleanScalarCheckBoxViewer"
+    font:"Dialog",1,12
+  }
+  JDSwingObject {
+    summit:807,530,913,552
+    origin:853,541
+    foreground:51,51,51
+    background:238,238,238
+    fillStyle:1
+    lineWidth:0
+    name:"epfl/ia/Distribution/MRUStatus"
+    extensions:{
+      text:"Connected"
+    }
+    className:"fr.esrf.tangoatk.widget.attribute.BooleanScalarCheckBoxViewer"
+    font:"Dialog",1,12
+  }
+  JDGroup {
+    summit:216,360,335,397
+    origin:59.5,18.5
+    name:"JDGroup"
+    children: {
+      JDPolyline {
+        summit:216,389,240,389,216,365,240,365,216,389
+        origin:228,377
+        fillStyle:1
+        name:"Polyline"
+        backgroundmapper:{
+          mapping_type:2
+          mode:0
+          default:128,128,128
+          map:0,0,255,255,255
+          map:1,1,0,0,0
+        }
+      }
+      JDLabel {
+        summit:244,360,300,381
+        origin:272,371
+        lineWidth:0
+        name:"Label"
+        text:"PV-100"
+        hAlignment:1
+      }
+      JDSwingObject {
+        summit:244,375,335,397
+        origin:290,386
+        foreground:51,51,51
+        background:238,238,238
+        fillStyle:1
+        lineWidth:0
+        name:"epfl/ia/Tank1/Valve"
+        extensions:{
+          text:"Open"
+        }
+        className:"fr.esrf.tangoatk.widget.attribute.BooleanScalarCheckBoxViewer"
+        font:"Dialog",1,12
+      }
+    }
+  }
+  JDGroup {
+    summit:454,359,573,396
+    origin:59.5,18.5
+    name:"JDGroup"
+    children: {
+      JDPolyline {
+        summit:454,388,478,388,454,364,478,364,454,388
+        origin:466,376
+        fillStyle:1
+        name:"Polyline"
+        backgroundmapper:{
+          mapping_type:2
+          mode:0
+          default:128,128,128
+          map:0,0,255,255,255
+          map:1,1,0,0,0
+        }
+      }
+      JDLabel {
+        summit:482,359,538,380
+        origin:510,370
+        lineWidth:0
+        name:"Label"
+        text:"PV-200"
+        hAlignment:1
+      }
+      JDSwingObject {
+        summit:482,374,573,396
+        origin:528,385
+        foreground:51,51,51
+        background:238,238,238
+        fillStyle:1
+        lineWidth:0
+        name:"epfl/ia/Tank2/Valve"
+        extensions:{
+          text:"Open"
+        }
+        className:"fr.esrf.tangoatk.widget.attribute.BooleanScalarCheckBoxViewer"
+        font:"Dialog",1,12
+      }
+    }
+  }
+  JDGroup {
+    summit:713,360,832,397
+    origin:59.5,18.5
+    name:"JDGroup"
+    children: {
+      JDPolyline {
+        summit:713,389,737,389,713,365,737,365,713,389
+        origin:725,377
+        fillStyle:1
+        name:"Polyline"
+        backgroundmapper:{
+          mapping_type:2
+          mode:0
+          default:128,128,128
+          map:0,0,255,255,255
+          map:1,1,0,0,0
+        }
+      }
+      JDLabel {
+        summit:741,360,797,381
+        origin:769,371
+        lineWidth:0
+        name:"Label"
+        text:"PV-301"
+        hAlignment:1
+      }
+      JDSwingObject {
+        summit:741,375,832,397
+        origin:787,386
+        foreground:51,51,51
+        background:238,238,238
+        fillStyle:1
+        lineWidth:0
+        name:"epfl/ia/Distribution/Valve301"
+        extensions:{
+          text:"Open"
+        }
+        className:"fr.esrf.tangoatk.widget.attribute.BooleanScalarCheckBoxViewer"
+        font:"Dialog",1,12
+      }
+    }
+  }
+  JDGroup {
+    summit:333,411,452,448
+    origin:59.5,18.5
+    name:"JDGroup"
+    children: {
+      JDPolyline {
+        summit:333,440,357,440,333,416,357,416,333,440
+        origin:345,428
+        fillStyle:1
+        name:"Polyline"
+        backgroundmapper:{
+          mapping_type:2
+          mode:0
+          default:128,128,128
+          map:0,0,255,255,255
+          map:1,1,0,0,0
+        }
+      }
+      JDLabel {
+        summit:361,411,417,432
+        origin:389,422
+        lineWidth:0
+        name:"Label"
+        text:"PV-101"
+        hAlignment:1
+      }
+      JDSwingObject {
+        summit:361,426,452,448
+        origin:407,437
+        foreground:51,51,51
+        background:238,238,238
+        fillStyle:1
+        lineWidth:0
+        name:"epfl/ia/Distribution/Valve101"
+        extensions:{
+          text:"Open"
+        }
+        className:"fr.esrf.tangoatk.widget.attribute.BooleanScalarCheckBoxViewer"
+        font:"Dialog",1,12
+      }
+    }
+  }
+  JDGroup {
+    summit:571,411,690,448
+    origin:59.5,18.5
+    name:"JDGroup"
+    children: {
+      JDPolyline {
+        summit:571,440,595,440,571,416,595,416,571,440
+        origin:583,428
+        fillStyle:1
+        name:"Polyline"
+        backgroundmapper:{
+          mapping_type:2
+          mode:0
+          default:128,128,128
+          map:0,0,255,255,255
+          map:1,1,0,0,0
+        }
+      }
+      JDLabel {
+        summit:599,411,655,432
+        origin:627,422
+        lineWidth:0
+        name:"Label"
+        text:"PV-201"
+        hAlignment:1
+      }
+      JDSwingObject {
+        summit:599,426,690,448
+        origin:645,437
+        foreground:51,51,51
+        background:238,238,238
+        fillStyle:1
+        lineWidth:0
+        name:"epfl/ia/Distribution/Valve201"
+        extensions:{
+          text:"Open"
+        }
+        className:"fr.esrf.tangoatk.widget.attribute.BooleanScalarCheckBoxViewer"
+        font:"Dialog",1,12
+      }
+    }
+  }
+}

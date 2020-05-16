@@ -1,0 +1,9 @@
+<taurusgui_config>
+  <GUI_NAME>SynopticView</GUI_NAME>
+  <ORGANIZATION>TAURUS</ORGANIZATION>
+  <CUSTOM_LOGO/>
+  <SYNOPTIC>
+    <synoptic str="PrimaryView.jdw"/>
+  </SYNOPTIC>
+  <MONITOR></MONITOR>
+</taurusgui_config>

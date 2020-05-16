@@ -1,0 +1,10 @@
+Project created by AppSettingsWizard on 2020-05-16T14:06:10.577473
+File copied: /home/tango-cs/Desktop/IndustrialAutomation2020/JDraw/PrimaryView.jdw --> /home/tango-cs/Desktop/IndustrialAutomation2020/TaurusGUI/tgconf_SynopticView/PrimaryView.jdw
+XML Config file created: "/home/tango-cs/Desktop/IndustrialAutomation2020/TaurusGUI/tgconf_SynopticView/config.xml"
+Python config file created: "/home/tango-cs/Desktop/IndustrialAutomation2020/TaurusGUI/tgconf_SynopticView/config.py"
+python init file created: "/home/tango-cs/Desktop/IndustrialAutomation2020/TaurusGUI/tgconf_SynopticView/__init__.py"
+Application project was successfully created.You can find the files in: "/home/tango-cs/Desktop/IndustrialAutomation2020/TaurusGUI"
+Tip: You can install it with:
+	pip install /home/tango-cs/Desktop/IndustrialAutomation2020/TaurusGUI
+Tip: And then run the application with:
+	 SynopticView
